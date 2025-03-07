@@ -193,10 +193,12 @@ is_nvidia_sku() {
     [[ "$clean" =~ ^standard_nd(6|12|24r?)s$ ]] ||
     [[ "$clean" =~ ^standard_nd40r?s_v2$ ]] ||
     [[ "$clean" =~ ^standard_nd96am?sr(_a100)?_v4$ ]] ||
+    [[ "$clean" =~ ^standard_nd96isr_h100_v5$ ]] ||
     \
     [[ "$clean" =~ ^standard_nv(6|12|24)$ ]] ||
     [[ "$clean" =~ ^standard_nv(6|12|24)s_v2$ ]] ||
-    [[ "$clean" =~ ^standard_nv(12|24|48)s_v3$ ]]
+    [[ "$clean" =~ ^standard_nv(12|24|48)s_v3$ ]] ||
+    [[ "$clean" =~ ^standard_nv(6|12|18|24|36|72)adm?s_a10_v5$ ]]
 }
 
 is_gpu_compute_sku() {
