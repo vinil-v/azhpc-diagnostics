@@ -194,7 +194,7 @@ is_nvidia_sku() {
     [[ "$clean" =~ ^standard_nd40r?s_v2$ ]] ||
     [[ "$clean" =~ ^standard_nd96am?sr(_a100)?_v4$ ]] ||
     [[ "$clean" =~ ^standard_nd96isr_h100_v5$ ]] ||
-    [[ "$clean" =~ ^standard_nc80adi?s(_h100)?_v5$ ]] ||
+    [[ "$clean" =~ ^standard_nc(40|80)adi?s(_h100)?_v5$ ]] ||
     [[ "$clean" =~ ^standard_nc(24|48|96)ads(_a100)?_v4$ ]] ||
     \
     [[ "$clean" =~ ^standard_nv(6|12|24)$ ]] ||
