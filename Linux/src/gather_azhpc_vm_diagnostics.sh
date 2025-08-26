@@ -1098,7 +1098,7 @@ fi
 ####################################################################################################
 
 if [ "$OFFLINE" != true ] && [ "$DISABLE_UPDATE" != true ] && ! [[ $- =~ 's' ]]; then
-    check_for_updates
+    #check_for_updates
 fi
 
 if [ ! "${BASH_SOURCE[0]}" -ef "$0" ]; then
