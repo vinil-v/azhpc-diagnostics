@@ -1097,9 +1097,9 @@ fi
 # End Option Parsing
 ####################################################################################################
 
-if [ "$OFFLINE" != true ] && [ "$DISABLE_UPDATE" != true ] && ! [[ $- =~ 's' ]]; then
-    #check_for_updates
-fi
+#if [ "$OFFLINE" != true ] && [ "$DISABLE_UPDATE" != true ] && ! [[ $- =~ 's' ]]; then
+#    check_for_updates
+#fi
 
 if [ ! "${BASH_SOURCE[0]}" -ef "$0" ]; then
     # This lets us load all functions for unit testing.
