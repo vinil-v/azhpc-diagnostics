@@ -250,23 +250,23 @@ print_divider() {
     echo ''
 }
 
-check_for_updates() {
-    local message="You are not running the latest release of this tool. Switch to latest version?"
-
-    local tmpfile
-    tmpfile=$(mktemp)
-    curl -s "$HPC_DIAG_URL" >"$tmpfile" || return 1
-    if ! cmp --silent "$0" "$tmpfile"; then
-        if prompt "$message"; then
-            mv "$tmpfile" "$0"
-            bash "$0" "$RUNTIME_OPTIONS"
-            exit $?
-        else
-            return 0
-        fi
-    fi
-    rm "$tmpfile"
-}
+#check_for_updates() {
+#    local message="You are not running the latest release of this tool. Switch to latest version?"
+#
+#    local tmpfile
+#    tmpfile=$(mktemp)
+#    curl -s "$HPC_DIAG_URL" >"$tmpfile" || return 1
+#    if ! cmp --silent "$0" "$tmpfile"; then
+#       if prompt "$message"; then
+#           mv "$tmpfile" "$0"
+#           bash "$0" "$RUNTIME_OPTIONS"
+#           exit $?
+#       else
+#           return 0
+#       fi
+#   fi
+#   rm "$tmpfile"
+#}
 
 get_metadata() {
     local path="$1"
